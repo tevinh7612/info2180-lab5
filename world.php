@@ -22,11 +22,12 @@ if (isset($_GET['country'])) {
   $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
   
   if (!empty($results)) {
-      echo '<ul>';
+      echo '<table>';
+      echo '<tr><th>Name</th><th>Continent</th><th>Independence</th><th>Head of State</th></tr>';
       foreach ($results as $row) {
-          echo '<li>' . $row['name'] . ' is ruled by ' . $row['head_of_state'] . '</li>';
+          echo '<tr><td>' . $row['name'] . '</td><td>' . $row['continent'] . '</td><td>' . $row['independence_year'] . '</td><td>' . $row['head_of_state'] . '</td></tr>';
       }
-      echo '</ul>';
+      echo '</table>';
   } else {
       echo 'No results found for the specified country.';
   }

@@ -2,6 +2,7 @@
 <html>
 	<head>
         <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>World Database Lookup</title>
 
 		<!-- you can modify this as needed or to your preference -->
@@ -13,14 +14,18 @@
 
 	<body>
 		<header>
+			<img src="connected_world_wuay.svg" alt="image of continents connected">
 			<h1>World Database Lookup</h1>
 		</header>
 
 		<main>
 			<div id="controls">
-				<label for="country">Country:</label>
+				<!-- <label for="country">Country:</label>  -->
 				<input id="country" type="search" name="country" placeholder="Enter country name" />
-				<button id="lookup">Lookup</button>
+				<div id="search-buttons">
+					<button id="lookup">Lookup Countries</button>
+					<button id="city-lookup">Lookup Cities</button>
+				</div>
 			</div>
 			
 			<div id="result">
